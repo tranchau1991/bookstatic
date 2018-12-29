@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset='UTF-8'>
+
+	<title>Cuốn sách da dê Jerusalem cổ huyển bí</title>
+
+	<link rel='stylesheet' href='style.css'>
+
+	<style>
+		.zone img {
+				margin: 123px 0;
+				display: block;
+		}
+	</style>
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+	/* lazyload.js (c) Lorenzo Giuliani
+	 * MIT License (http://www.opensource.org/licenses/mit-license.html)
+	 *
+	 * expects a list of:
+	 * `<img src="blank.gif" data-src="my_image.png" width="600" height="400" class="lazy">`
+	 */
+	 $(function() {
+	  var $q = function(q, res){
+	        if (document.querySelectorAll) {
+	          res = document.querySelectorAll(q);
+	        } else {
+	          var d=document
+	            , a=d.styleSheets[0] || d.createStyleSheet();
+	          a.addRule(q,'f:b');
+	          for(var l=d.all,b=0,c=[],f=l.length;b<f;b++)
+	            l[b].currentStyle.f && c.push(l[b]);
+
+	          a.removeRule(0);
+	          res = c;
+	        }
+	        return res;
+	      }
+	    , addEventListener = function(evt, fn){
+	        window.addEventListener
+	          ? this.addEventListener(evt, fn, false)
+	          : (window.attachEvent)
+	            ? this.attachEvent('on' + evt, fn)
+	            : this['on' + evt] = fn;
+	      }
+	    , _has = function(obj, key) {
+	        return Object.prototype.hasOwnProperty.call(obj, key);
+	      }
+	    ;
+
+	  function loadImage (el, fn) {
+	    var img = new Image()
+	      , src = el.getAttribute('data-src');
+	    img.onload = function() {
+	      if (!! el.parent)
+	        el.parent.replaceChild(img, el)
+	      else
+	        el.src = src;
+
+	      fn? fn() : null;
+	    }
+	    img.src = src;
+	  }
+
+	  function elementInViewport(el) {
+	    var rect = el.getBoundingClientRect()
+
+	    return (
+	       rect.top    >= 0
+	    && rect.left   >= 0
+	    && rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+	    )
+	  }
+		
+	    
+
+	  
+	  
+	  function load_lazy(){
+		
+			var images = new Array()
+			  , query = $q('img.lazy')
+			  , processScroll = function(){
+				  for (var i = 0; i < images.length; i++) {
+					if (elementInViewport(images[i])) {
+					  loadImage(images[i], function () {
+						images.splice(i, i);
+					  });
+					}
+				  };
+				}
+			  ;
+			// Array.prototype.slice.call is not callable under our lovely IE8
+			for (var i = 0; i < query.length; i++) {
+			  images.push(query[i]);
+			};
+
+			processScroll();
+			addEventListener('scroll',processScroll);
+		}
+	  
+	  var linkpic ="https://farm5.staticflickr.com/4842/45596339415_c99c4e3ce8_b.jpg,https://farm5.staticflickr.com/4835/44692648700_6657436218_b.jpg,https://farm5.staticflickr.com/4858/44692648950_a26893a5b7_b.jpg,https://farm5.staticflickr.com/4814/46457721962_9340786e0c_b.jpg,https://farm5.staticflickr.com/4835/45597316855_ef350313b5_b.jpg,https://farm5.staticflickr.com/4914/45597316685_dc81c70994_b.jpg,https://farm5.staticflickr.com/4853/46510700901_d8faf4f81d_b.jpg,https://farm8.staticflickr.com/7850/46510700851_d8faf4f81d_b.jpg,https://farm5.staticflickr.com/4826/32637740498_02a0065a29_b.jpg,https://farm8.staticflickr.com/7845/32637740018_747f37fe5d_b.jpg,https://farm8.staticflickr.com/7802/44693728400_c42b929db9_b.jpg,https://farm8.staticflickr.com/7910/46458807802_b5d18eeb54_b.jpg,https://farm5.staticflickr.com/4813/31570632757_a090b36d35_b.jpg,https://farm5.staticflickr.com/4803/31570632297_f427ecd0c3_b.jpg,https://farm5.staticflickr.com/4865/31570632547_79bf7946bd_b.jpg,https://farm8.staticflickr.com/7839/45597315655_a210fc73fd_b.jpg,https://farm8.staticflickr.com/7814/45786933704_6a295a2966_b.jpg,https://farm5.staticflickr.com/4869/32637738018_9a759140e7_b.jpg,https://farm8.staticflickr.com/7876/32637737918_5f90ca3478_b.jpg,https://farm8.staticflickr.com/7819/46510694761_86a362552a_b.jpg,https://farm5.staticflickr.com/4830/45597312515_6cab48ccca_b.jpg,https://farm5.staticflickr.com/4863/44693723550_0ed6cc3178_b.jpg,https://farm8.staticflickr.com/7850/44693722930_4bbcec3047_b.jpg,https://farm8.staticflickr.com/7890/46458803382_c0be29d332_b.jpg,https://farm8.staticflickr.com/7811/46458803472_16cba78d7d_b.jpg,https://farm5.staticflickr.com/4854/45786929624_b65eb95508_b.jpg,https://farm5.staticflickr.com/4871/46458802772_5246494891_b.jpg,https://farm5.staticflickr.com/4903/46458801412_45fb222a09_b.jpg,https://farm8.staticflickr.com/7899/31570628257_a3979f6db4_b.jpg,https://farm5.staticflickr.com/4886/46458800342_b0dce4dfcf_b.jpg,https://farm8.staticflickr.com/7899/45786926424_ab0191e36c_b.jpg,https://farm8.staticflickr.com/7909/45786926854_f3474d462c_b.jpg,https://farm8.staticflickr.com/7853/46458798352_e51a505c82_b.jpg,https://farm8.staticflickr.com/7818/45597308215_b6963f8e5f_b.jpg,https://farm5.staticflickr.com/4862/46458798442_e224915daa_b.jpg,https://farm5.staticflickr.com/4833/44693718670_834432824b_b.jpg,https://farm8.staticflickr.com/7866/44693718330_7561a46141_b.jpg,https://farm5.staticflickr.com/4836/46510686641_ff9477c709_b.jpg,https://farm8.staticflickr.com/7812/46510686531_5ba26fcbab_b.jpg,https://farm8.staticflickr.com/7819/31570624297_264b4f2d83_b.jpg,https://farm8.staticflickr.com/7869/45786923674_6c72c3ccf8_b.jpg,https://farm8.staticflickr.com/7874/45597306505_f23bb83dd0_b.jpg,https://farm5.staticflickr.com/4900/45597305125_c545f8018e_b.jpg,https://farm5.staticflickr.com/4804/45786922224_882d4472f2_b.jpg,https://farm8.staticflickr.com/7834/45597304775_47b6d0129d_b.jpg,https://farm8.staticflickr.com/7888/46510682131_d8cbd77af1_b.jpg,https://farm5.staticflickr.com/4834/46458793082_ac59c8b3d8_b.jpg,https://farm5.staticflickr.com/4904/44693714200_64d12a0178_b.jpg,https://farm5.staticflickr.com/4876/32637726788_b04c585d21_b.jpg,https://farm8.staticflickr.com/7836/31570620597_4d3e9f31eb_b.jpg,https://farm5.staticflickr.com/4902/44693713000_093bf16e94_b.jpg,https://farm8.staticflickr.com/7877/45597303315_e348f18900_b.jpg,https://farm5.staticflickr.com/4914/32637725058_80f18656ea_b.jpg,https://farm8.staticflickr.com/7853/31570616687_0d9b5c8591_b.jpg,https://farm8.staticflickr.com/7803/31570617267_fc818dda5a_b.jpg,https://farm8.staticflickr.com/7912/31570617147_a56dfbce65_b.jpg,https://farm5.staticflickr.com/4829/31570616337_edab1aef71_b.jpg,https://farm5.staticflickr.com/4845/31570616087_8ce74e92aa_b.jpg,https://farm5.staticflickr.com/4836/32637723558_84e3a9ed6d_b.jpg,https://farm8.staticflickr.com/7843/44693708360_69f887c8bc_b.jpg,https://farm8.staticflickr.com/7801/32637723538_84e3a9ed6d_b.jpg,https://farm5.staticflickr.com/4861/44693708750_da9f5723f6_b.jpg,https://farm5.staticflickr.com/4889/32637722108_e8bb4b9072_b.jpg,https://farm5.staticflickr.com/4896/45597297035_2762922b51_b.jpg,https://farm5.staticflickr.com/4832/45597296895_04fd2d05cc_b.jpg,https://farm5.staticflickr.com/4914/46458776582_b2d3c850a6_b.jpg,https://farm5.staticflickr.com/4832/45786911504_b3fb9be550_b.jpg,https://farm5.staticflickr.com/4867/44693704510_ac2e7cd983_b.jpg,https://farm8.staticflickr.com/7800/46458775632_d286fc692d_b.jpg,https://farm5.staticflickr.com/4809/45786909854_4375b31d27_b.jpg,https://farm8.staticflickr.com/7844/45786909534_6e62e297df_b.jpg,https://farm8.staticflickr.com/7848/46510675331_6e62e297df_b.jpg,https://farm5.staticflickr.com/4906/44693703190_fd7168fb50_b.jpg,https://farm5.staticflickr.com/4828/45786902564_ba4b868430_b.jpg,https://farm5.staticflickr.com/4909/45786902254_1f5ebc6fe3_b.jpg,https://farm5.staticflickr.com/4849/46458773792_d2520f891a_b.jpg,https://farm5.staticflickr.com/4854/45786899734_33a069d0f9_b.jpg,https://farm5.staticflickr.com/4813/46458772492_a941039b87_b.jpg,https://farm8.staticflickr.com/7866/45786902614_38cd56259b_b.jpg,https://farm8.staticflickr.com/7869/45786898964_85f8e1d2ff_b.jpg,https://farm5.staticflickr.com/4877/46458773372_dd96887fe2_b.jpg,https://farm5.staticflickr.com/4808/46458772372_219cbe434d_b.jpg,https://farm8.staticflickr.com/7828/46458772072_13bdcca189_b.jpg,https://farm8.staticflickr.com/7882/45597240105_b8e01e7fce_b.jpg,https://farm8.staticflickr.com/7827/46510619181_43279234b4_b.jpg,https://farm8.staticflickr.com/7832/44693634250_3debb5b073_b.jpg,https://farm5.staticflickr.com/4857/44693634100_f1e1077ffc_b.jpg,https://farm8.staticflickr.com/7912/46510619771_14e7a218a9_b.jpg,https://farm8.staticflickr.com/7909/44693634300_488fb805fe_b.jpg,https://farm8.staticflickr.com/7912/46458733682_d695c5d14d_b.jpg,https://farm5.staticflickr.com/4830/46510619431_9b06cb1b13_b.jpg,https://farm8.staticflickr.com/7807/46510620531_45d5c2e103_b.jpg,https://farm5.staticflickr.com/4909/46510620401_4f1fcfc48c_b.jpg,https://farm5.staticflickr.com/4819/32637644788_2258362742_b.jpg,https://farm5.staticflickr.com/4902/32637644948_ccc385bef5_b.jpg,https://farm8.staticflickr.com/7841/44693597300_2b22bebdfe_b.jpg,https://farm5.staticflickr.com/4892/31570531427_1bec91d593_b.jpg,https://farm5.staticflickr.com/4884/31570530517_22efaf1680_b.jpg,https://farm8.staticflickr.com/7896/46458684562_3590d966ef_b.jpg,https://farm5.staticflickr.com/4906/32637642118_aac912eb00_b.jpg,https://farm8.staticflickr.com/7837/46510579071_9c58ab8274_b.jpg,https://farm8.staticflickr.com/7848/46510578811_ebd93ea807_b.jpg,https://farm5.staticflickr.com/4909/44693594220_ebd93ea807_b.jpg,https://farm8.staticflickr.com/7815/44693594480_b21ab42b12_b.jpg,https://farm5.staticflickr.com/4905/46510579401_4688006372_b.jpg,https://farm5.staticflickr.com/4907/45786815084_51a09de29a_b.jpg,https://farm8.staticflickr.com/7865/45597207085_487104acde_b.jpg,https://farm5.staticflickr.com/4880/45596549525_26af19a3be_b.jpg,https://farm8.staticflickr.com/7914/44692875430_959cfd1426_b.jpg,https://farm5.staticflickr.com/4906/45786165154_06d264f9f2_b.jpg,https://farm5.staticflickr.com/4843/45786165224_3010d79de2_b.jpg,https://farm5.staticflickr.com/4887/44692875610_c22854a364_b.jpg,https://farm8.staticflickr.com/7915/44692875590_c22854a364_b.jpg,https://farm5.staticflickr.com/4831/44692875650_31e8c750db_b.jpg,https://farm5.staticflickr.com/4806/32636968938_2d7cb4b762_b.jpg,https://farm5.staticflickr.com/4815/32636968768_3e088794bd_b.jpg,https://farm8.staticflickr.com/7858/32636966668_192de2f04d_b.jpg,https://farm8.staticflickr.com/7856/44692869710_65dd852819_b.jpg,https://farm8.staticflickr.com/7875/45786160434_20a35f651b_b.jpg,https://farm5.staticflickr.com/4868/44692869620_501ca92ac7_b.jpg,https://farm8.staticflickr.com/7891/31569901157_8d65c5e51e_b.jpg,https://farm5.staticflickr.com/4877/31569901477_1cf520385e_b.jpg,https://farm5.staticflickr.com/4881/45786160534_586f5fd585_b.jpg,https://farm8.staticflickr.com/7880/45786160494_66c87e6fee_b.jpg,https://farm5.staticflickr.com/4906/31569900397_db72fc9d28_b.jpg,https://farm8.staticflickr.com/7915/45786160164_597a904486_b.jpg,https://farm8.staticflickr.com/7923/31569901117_d401f9a28e_b.jpg,https://farm8.staticflickr.com/7900/45596526395_ca55eb92aa_b.jpg,https://farm5.staticflickr.com/4881/32636943658_fa968e665c_b.jpg,https://farm8.staticflickr.com/7918/46457940732_28a6f26148_b.jpg,https://farm5.staticflickr.com/4915/45596526545_ff93246d45_b.jpg,https://farm8.staticflickr.com/7800/46457940792_b762caa426_b.jpg,https://farm5.staticflickr.com/4895/46509890411_1ba03712c0_b.jpg,https://farm5.staticflickr.com/4844/45596526605_89216f1c29_b.jpg,https://farm8.staticflickr.com/7868/45786135094_3deb9f8b6e_b.jpg,https://farm5.staticflickr.com/4844/45596526015_225b755241_b.jpg,https://farm8.staticflickr.com/7914/46457939462_b1c35ecaa1_b.jpg";
+	  
+	  set_data();
+	  function set_data(){
+		var list =linkpic.split(",");
+		var strtext="";
+		for(var at in list){
+			//strtext +='<img src="'+list[at]+'"/>'
+			strtext +='<img data-src="'+list[at]+'" src="blank.gif" class="lazy"/>'
+		}
+		//console.log(strtext)
+		//var content = ""
+		$('.zone').html(strtext);
+		load_lazy();
+	  };
+	  
+	 });
+	  
+	</script>
+</head>
+
+<body>
+
+<div id="demo-top-bar">
+
+  <div id="demo-bar-inside">
+
+    <h2 id="demo-bar-badge">
+      <a href="#">Cuốn sách da dê Jerusalem cổ huyển bí</a>
+    </h2>
+
+    <div id="demo-bar-buttons">
+          </div>
+
+  </div>
+
+</div>
+	<div id="page-wrap">
+
+		<h1>Cuốn sách da dê Jerusalem cổ huyển bí</h1>
+
+		<p>Scroll down...</p>
+
+		<div class="zone">
+			<img width="612" height="612" data-src="https://farm5.staticflickr.com/4842/45596339415_c99c4e3ce8_b.jpg" src="blank.gif" class="lazy">
+
+		</div>
+
+	</div>
+
+ <style type="text/css" style="display: none !important;">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		overflow-x: hidden;
+	}
+	#demo-top-bar {
+		text-align: left;
+		background: #222;
+		position: relative;
+		zoom: 1;
+		width: 100% !important;
+		z-index: 6000;
+		padding: 20px 0 20px;
+	}
+	#demo-bar-inside {
+		width: 960px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#demo-bar-buttons {
+		padding-top: 10px;
+		float: right;
+	}
+	#demo-bar-buttons a {
+		font-size: 12px;
+		margin-left: 20px;
+		color: white;
+		margin: 2px 0;
+		text-decoration: none;
+		font: 14px "Lucida Grande", Sans-Serif !important;
+	}
+	#demo-bar-buttons a:hover,
+	#demo-bar-buttons a:focus {
+		text-decoration: underline;
+	}
+	#demo-bar-badge {
+		display: inline-block;
+		width: 302px;
+		padding: 0 !important;
+		margin: 0 !important;
+		background-color: transparent !important;
+	}
+	#demo-bar-badge a {
+		display: block;
+		width: 100%;
+		height: 38px;
+		border-radius: 0;
+		bottom: auto;
+		margin: 0;
+		background: url(images/examples-logo.png) no-repeat;
+		background-size: 100%;
+		overflow: hidden;
+		text-indent: -9999px;
+	}
+	#demo-bar-badge:before, #demo-bar-badge:after {
+		display: none !important;
+	}
+</style>
+</body>
+
+</html>
